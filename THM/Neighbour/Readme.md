@@ -1,6 +1,12 @@
 ## Neighbour
 
 - In this room we will learn about the IDOR (Insecure Direct Object Reference) vulnerability.
+- In this the application/website directly exposes the object which refers to any user or data or any other 
+information without even authorization.
+- In this any user can read/write any other users data and can make use of it and gain the access to the sensitive information
+- This happens because the parameter which is used to identify the users is not secure and it is read directly 
+- In order to avoid us, user should be restricted to their own account and access to other users should be forbidden.
+- The parameters should be unique and difficult to crack
 - After starting the machine, navigate to the following URL using the AttackBox: http://IP
 - A login screen is provided, they have mentioned, we can use the guest account and there is a link.
 
