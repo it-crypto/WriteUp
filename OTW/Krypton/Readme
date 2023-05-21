@@ -1,0 +1,113 @@
+Level 0
+
+Q. The following string encodes the password using Base64:
+
+S1JZUFRPTklTR1JFQVQ=
+
+Ans : KRYPTONISGREAT
+
+//used cyberchef
+
+
+M
+
+Level 1
+
+Q. From the krypton folder, read the readme file and do required. Use rot13 cipher to get the password.
+
+Ans: ROTTEN
+
+
+
+Level2:
+
+Q. Caesar Cipher
+
+Ans: CAESARISEASY
+
+
+
+
+
+Level3:
+
+Q. Frequency Analysis
+
+→ In this level, we need to find frequencies of the letters from found files and find which letter is suited to which.
+→ We can find single frequencies, double frequencies and tripe frequencies and work on that.
+→ After finding out the suitable letter replace them and make substitutions and get the key.
+→ After that use the “tr” command to get the plain text from krypton4
+
+Command: cat krypton4 | tr ABCDEFGHIJKLMNOPQRSTUVWXYZ BOIHGKNQVTWYURXZAJEMSLDFPC
+
+Ans: BRUTE
+
+ 
+
+
+Level4
+
+Q. find the password
+
+→ In this level, we learn about Vigenere cipher, the cipher where we use different substitutions cipher (polyalphabetic cipher). Some times, we are provided with key length or keyword based on that we can find the which letter is being mapped to which letter and then find the letter and use the key to find the decrypted text.
+→ In this level, we used this website we can find the keyword based on the key length and used that to find the decrypted text.
+
+Ans: CLEARTEXT
+
+https://f00l.de/hacking/vigenere.php
+
+
+
+
+
+
+
+
+
+
+Level 5:
+
+→ In this level also, we have a vignere cipher but without any key or key length.
+→ We need to find out what is the key.
+→ I used the tool https://www.dcode.fr/vigenere-cipher to find the key.
+→ With the key found, I took the cipher text and used then decryted the text.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Level 6:
+
+→ In this level, we are given a stream cipher.
+→ We need to find the key and then use the key on the cipher text to get the plain text.
+→ We are given an executable which takes two arguments one is input file and other is output file.
+→ We have given a sample data to find what is the pattern.
+→ We find that for every 30 characters the pattern is repeating.
+
+
+
+→ So used this as key and have taken the cipher text and written a script to find the password.
+
+Code:
+
+key = 'EICTDGYIYZKTHNSIRFXYCPFUEOCKRN'
+ciphertext='PNUKLYLWRQKGKBE'
+
+for i in range(len(ciphertext)):
+        k = ord(ciphertext[i])-ord(key[i])
+        if k<0: k+=26
+        k += ord('A')
+        print(chr(k),end='')
+
+Ans: LFSRISNOTRANDOM
+
+
