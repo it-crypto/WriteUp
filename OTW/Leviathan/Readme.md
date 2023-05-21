@@ -11,6 +11,8 @@ Q. Find the flag.
 
 Ans : PPIfmI1qsA
 
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/018875a4-aa03-412b-b196-b0e785a0de31)
+
 Level 2:
 
 Q. Find the flag
@@ -25,16 +27,9 @@ ltrace shows parameters of invoked functions and system calls. To determine what
 
 Ans: mEh5PNl10e
 
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/cb92f580-1e32-4239-886e-3366a805de42)
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/1ff45b68-de27-4771-8e81-bdb5c03e68c3)
 
-
-
-
-
-
-
-
-
- 
 Leviathan3
 
 Q. Find the flag
@@ -44,8 +39,7 @@ I found there is access call and there is bin/ cat to print the contents of the 
 
 Ans : Q0G8j4sakn
 
-
-
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/72f5775f-bf27-4e6e-909e-0886e9729c20)
 
 leviathan4
 
@@ -54,9 +48,8 @@ Q. Find the flag
 Ans : AgvropI4OA
 // in this also, they are comparing the string with “snlprintf” and after we will get access to shell.
 
-
-
-
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/cc7b15da-2230-4d47-a029-b438737e2c9f)
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/7de59833-ba69-421b-9bf0-b8cf4303e928)
 
 leviathan5
 
@@ -68,6 +61,7 @@ Ans: EKKlTF1Xqs
 
 After decoding from binary to text I found the flag.
 
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/c83a68a5-4897-4e9d-9f65-d049b65604f3)
 
 Leviathan6
 
@@ -77,6 +71,8 @@ Ans: YZ55XPVk2l
 
 // In this level, an executable is there it wants to link the file which is not there, so we create the file and link to the etc/leviathan_pass / leviathan6 so that it can read the data.
 
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/2dbbae16-525f-46db-b42d-b1327f7fe676)
+
 Leviathan7
 
 Q. Find the flag.
@@ -85,27 +81,11 @@ Ans : 8GpZ5f8Hze
 
 // in this level, there is a executable which is asking for four digit pin, so brute force it and there after some time we find the shell and from there we can get the password.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/a97692c2-0f59-4877-bff6-dd4f3b697a2c)
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/04679bd1-fbd9-4cb6-9f3d-51d6356e8443)
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/42c2bbcb-8051-4dea-8974-f09b19bff7de)
 
 Leviathan8
+
+![image](https://github.com/it-crypto/WriteUp/assets/54020728/e4f04c8b-8c0e-4527-afab-422b4e4d0526)
 
