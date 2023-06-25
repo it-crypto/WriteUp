@@ -62,7 +62,7 @@
   ![image](https://github.com/it-crypto/WriteUp/assets/54020728/0517d990-76ee-44ef-b6a8-94a584f1b831)
 
 * Flag:  
- ![image](https://github.com/it-crypto/WriteUp/assets/54020728/cacd3b7b-a5a0-48b1-aa33-02227720ee1d)
+ ![image](https://github.com/it-crypto/WriteUp/assets/54020728/9256f176-f47b-499e-97f1-2e964bbc8c51)
 
 * References:
   * https://www.youtube.com/watch?v=QG-z0r9afIs&ab_channel=decrypt
