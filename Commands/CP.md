@@ -20,6 +20,13 @@ arp -g
 # Nmap
 1. nmap -sV -O -sC -T4 <ip_addr>
 2. nmap -A -T4 <ip_addr>
+3. nmap -sV -sC <ipaddr>  -- version detection and basic scripts
+4. nmap -sV -O <ipaddr> -- OS detection
+5. nmap -A -T4 <ipadd> -- A does all version detection, OS detection, script scanning (basic)
+6. nmap --script <script_name> <ipaddr> -- to launch a specific script
+7. nmap -sU <ipaddr> -- UDP scanning
+8. nmap -sS <ipaddr> -- Stealth scanning
+9. nmap -sA <ipaddr> -- Ack scanning
 
 # Snow
 
@@ -68,10 +75,62 @@ output.txt The file in which you want the output.
 # Mysql client
 1. Command : mysql -u <user> -h <url> -p   -- able to connect mysql running on port 3306
 * After connecting to mysql
-2.Commands
-  1. show databases;
-  2. use <database_name>;  -- the dtabase you wanna check
-  3. select * from <tablename>;
+2. Commands:
+    1. show databases;
+    2. use <database_name>;  -- the dtabase you wanna check
+    3. select * from <tablename>;
+     
+# wpscan
+1. wpscan --url <url> -- scan a wordpress website
+2. wpscan --url <url> -enumerate u  -- enumerates the wordpress users
+3. wpscan --url <url> --wordlist <path_to_wordlist> --username <username> --threads <no_of_threads_to_use>
+### enumeration arguments:
+1. p -- plugins
+2. ap -- all plugins
+3. t --themes
+4. at -- all themes
+5. tt -- timthumbs
+6. vt -- only vulnerable themes
+7. vp -- only vulnerable plugins
+
+# Wireshark:
+* Detecting DDOS : a large number of SYN packets being sent to a single PC.
+* We can check the number of syn packets with the following flags:
+--> tcp.flags.syn ==1 and tcp.flags.ack==0
+--> tcp.flags.syn ==1
+* If we use the following display filter to display syn/ack packets there will be a huge discrepancy between them and previous filter packets
+--> tcp.flags.syn==1 and tcp.flags.ack==1
+##### Detection with Conversations.
+From wireshark go to statistics-->Conversations-->IPv4
+--> If there are number of packets targeted on one IP from different Source addresses and no reply back, it indicates DDOS
+##### Detection with Statistics
+Wireshark->Statistics->I/o graphs -- sudden increase in graphs indicate DDOS
+
+# Hping3:
+hping3 -A <ipaddr> -p 80 -c 5  --pinging the target ip for 80 port by sending 5 packets.
+
+hping3 -8 0-100 -S <ipaddr> -V -- 
+-8  : scan mode
+0-100 -scanning 100 ports
+-S : SYN flag
+-V : verbose
+// when doing scan mode in output we get info of 
+port server_name flags ttl id win len
+
+hping3 -F -P -U <ipaddr> -p 80 -c 5 
+-F : FIN flag
+-P : push flag
+-U : urg flag
+
+hping3 --scan 0-100 -S <ipaddr>
+--scan : -8 : scan mode 
+-S: SYN flag
+
+# John the Ripper
+john --format=<hash_format> --wordlist=<path_to_wordlist> <hash_file>
+
+# Hydra
+hydra -L <username_list> -P <password_list> <ip_Addr> servicename:portno
 
 # Hack an Android Device by Creating Binary Payloads using Parrot Security
 
